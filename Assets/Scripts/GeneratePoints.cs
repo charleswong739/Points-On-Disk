@@ -33,7 +33,7 @@ public class GeneratePoints : MonoBehaviour
         }
 
         for (int i = 0; i < 300; i++) {
-            float dst = Mathf.Sqrt((i + 0.5f) / 300) * radius;
+            float dst = Mathf.Sqrt((i + 0.5f) / 300f) * radius;
             float theta = 2 * Mathf.PI * i * turnFraction; // (1 + Mathf.Sqrt(5));
 
             float x = dst * Mathf.Cos(theta);
@@ -76,7 +76,7 @@ public class GeneratePoints : MonoBehaviour
         if (numPoints < 300) {
 
             for (int i = 0; i < numPoints; i++) {
-            float dst = Mathf.Sqrt((i + 0.5f) / numPoints) * radius;
+            float dst = Mathf.Sqrt((i + 0.5f) / ((float) numPoints)) * radius;
             float theta = 2 * Mathf.PI * i * turnFraction; // (1 + Mathf.Sqrt(5));
 
             float x = dst * Mathf.Cos(theta);
@@ -99,7 +99,7 @@ public class GeneratePoints : MonoBehaviour
         if (0 <= turnFrac && turnFrac <= 3) {
 
             for (int i = 0; i < n; i++) {
-            float dst = Mathf.Sqrt((i + 0.5f) / n) * radius;
+            float dst = Mathf.Sqrt((i + 0.5f) / ((float) n)) * radius;
             float theta = 2 * Mathf.PI * i * turnFrac; // (1 + Mathf.Sqrt(5));
 
             float x = dst * Mathf.Cos(theta);
